@@ -1,0 +1,33 @@
+<view class="survey-container">
+  <view class="header-banner">
+    <text class="banner-title">📋 听见乡村声音</text>
+    <text class="banner-desc">您的反馈是我们研究的重要基石</text>
+  </view>
+
+  <view class="card">
+    <text class="card-label">📝 学生问卷</text>
+    <text class="card-hint">关于AI双语科普学习的体验调查</text>
+    <!-- 按钮绑定新的弹出二维码事件 -->
+    <button class="go-btn" bindtap="showStudentQR">获取学生问卷二维码</button>
+  </view>
+
+  <view class="card">
+    <text class="card-label">👨‍👩‍👧 家长问卷</text>
+    <text class="card-hint">关于农村青少年科技教育需求的调查</text>
+    <button class="go-btn" bindtap="showParentQR">获取家长问卷二维码</button>
+  </view>
+</view>
+
+<!-- 优雅的二维码弹窗层 -->
+<view class="modal-mask" wx:if="{{showModal}}" bindtap="closeModal">
+  <!-- catchtap="preventClose" 阻止点击内容区时关闭弹窗 -->
+  <view class="modal-content" catchtap="preventClose">
+    <view class="modal-close" bindtap="closeModal">×</view>
+    <text class="modal-title">{{modalTitle}}</text>
+    
+    <!-- show-menu-by-longpress 允许在微信里长按识别或保存 -->
+    <image class="qr-code" src="{{qrCodeUrl}}" mode="aspectFit" show-menu-by-longpress="true"></image>
+    
+    <text class="modal-hint">👉 长按上方二维码即可识别或保存</text>
+  </view>
+</view>

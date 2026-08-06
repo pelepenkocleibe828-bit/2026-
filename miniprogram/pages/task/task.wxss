@@ -1,0 +1,159 @@
+page {
+  background: #f8f8f8;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.container {
+  padding: 30rpx;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40rpx;
+  padding-top: 20rpx;
+}
+
+.title {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.empty-task {
+  text-align: center;
+  margin-top: 100rpx;
+  color: #999;
+  font-size: 28rpx;
+  margin-bottom: 80rpx;
+}
+
+.task-content {
+  margin-bottom: 60rpx;
+}
+
+/* 任务卡片 */
+.task-card {
+  background: #fff;
+  border-radius: 20rpx;
+  padding: 40rpx;
+  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.05);
+  margin-bottom: 40rpx;
+}
+
+.task-date {
+  font-size: 24rpx;
+  color: #d97757;
+  margin-bottom: 10rpx;
+}
+
+.task-title {
+  font-size: 34rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20rpx;
+}
+
+.task-desc {
+  font-size: 28rpx;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* 打卡操作区 */
+.checkin-section {
+  background: #fff;
+  border-radius: 20rpx;
+  padding: 40rpx;
+  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.05);
+}
+
+.section-label {
+  display: block;
+  font-size: 28rpx;
+  color: #333;
+  margin-bottom: 20rpx;
+  font-weight: bold;
+}
+
+.password-input {
+  background: #f5f5f5;
+  border-radius: 12rpx;
+  padding: 20rpx;
+  font-size: 28rpx;
+  margin-bottom: 30rpx;
+  text-align: center;
+}
+
+.checkin-btn {
+  background: #d97757;
+  color: #fff;
+  border-radius: 12rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  width: 100%;
+}
+
+.checkin-btn::after {
+  border: none;
+}
+
+.checkin-btn[disabled] {
+  background: #e0e0e0 !important;
+  color: #999 !important;
+}
+
+/* 🏆 我的徽章区域 */
+.badges-section {
+  margin-top: 20rpx;
+}
+
+.section-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 30rpx;
+}
+
+.badge-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.badge-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  border-radius: 20rpx;
+  padding: 30rpx 0;
+  width: 30%;
+  box-shadow: 0 4rpx 12rpx rgba(0,0,0,0.03);
+  transition: all 0.3s;
+}
+
+/* 亮起时的徽章外框描边效果 */
+.badge-item.active {
+  box-shadow: 0 4rpx 16rpx rgba(217, 119, 87, 0.2);
+  border: 2rpx solid rgba(217, 119, 87, 0.3);
+}
+
+.badge-circle {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  background: #fff9f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16rpx;
+}
+
+/* 控制Emoji大小，确保在圆圈中间 */
+.emoji {
+  font-size: 60rpx;
+  line-height: 1;
+}
+
+.badge-name {
+  font-size: 26rpx;
+}

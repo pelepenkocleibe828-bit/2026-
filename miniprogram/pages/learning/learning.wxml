@@ -1,0 +1,33 @@
+<view class="container">
+  <view class="header">
+    <text class="title">每日双语闪卡</text>
+  </view>
+
+  <view class="loading-state" wx:if="{{isLoading}}">加载中...</view>
+
+  <view class="empty-state" wx:if="{{!isLoading && !todayCard}}">
+    <text>今日闪卡还在路上，明天再来看看吧~</text>
+  </view>
+
+  <!-- 3D 卡片区域 -->
+  <view class="card-container" wx:if="{{!isLoading && todayCard}}" bindtap="flipCard">
+    <view class="flashcard {{isFlipped ? 'flipped' : ''}}">
+      
+      <!-- 正面：英文 -->
+      <view class="card-face card-front">
+        <text class="word-en">{{todayCard.en}}</text>
+        <text class="tap-tip">👉 点击翻转查看释义与口令</text>
+      </view>
+      
+      <!-- 背面：中文和打卡口令 -->
+      <view class="card-face card-back">
+        <text class="word-zh">{{todayCard.zh}}</text>
+        <view class="password-box">
+          <text class="pwd-label">今日打卡口令</text>
+          <text class="pwd-value">{{todayCard.passwordHint}}</text>
+        </view>
+      </view>
+
+    </view>
+  </view>
+</view>

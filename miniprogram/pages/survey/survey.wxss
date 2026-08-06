@@ -1,0 +1,82 @@
+.survey-container {
+  padding: 40rpx 32rpx; 
+  background: #F8F7F5; 
+  min-height: 100vh;
+}
+
+.header-banner { text-align: left; padding: 20rpx 0 60rpx; }
+.banner-title { font-size: 48rpx; font-weight: 600; color: #2C2C2C; display: block; margin-bottom: 12rpx; }
+.banner-desc { font-size: 28rpx; color: #76746F; display: block; line-height: 1.5; }
+
+.card {
+  background: #FFFFFF; border-radius: 16rpx; padding: 40rpx 32rpx;
+  margin-bottom: 32rpx; border: 1rpx solid #EBEAE5; box-shadow: none;
+}
+.card-label { font-size: 34rpx; font-weight: 600; display: block; margin-bottom: 12rpx; color: #2C2C2C;}
+.card-hint { font-size: 28rpx; color: #76746F; display: block; margin-bottom: 32rpx; line-height: 1.5; }
+
+.go-btn {
+  background: #2C2C2C; 
+  color: #FFFFFF; border-radius: 12rpx;
+  font-size: 32rpx; padding: 16rpx 0; font-weight: 500;
+}
+
+/* ================= 弹窗专属样式 ================= */
+.modal-mask {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+  background: #FFFFFF;
+  width: 80%;
+  border-radius: 32rpx;
+  padding: 60rpx 40rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.modal-close {
+  position: absolute;
+  top: 16rpx;
+  right: 24rpx;
+  font-size: 56rpx;
+  color: #A1A1A1;
+  padding: 10rpx;
+  line-height: 1;
+}
+
+.modal-title {
+  font-size: 36rpx;
+  font-weight: 600;
+  color: #2C2C2C;
+  margin-bottom: 40rpx;
+}
+
+.qr-code {
+  width: 400rpx;
+  height: 400rpx;
+  margin-bottom: 30rpx;
+  background: #F4F4F4; /* 占位背景色，防止图片加载慢时难看 */
+  border-radius: 12rpx;
+}
+
+.modal-hint {
+  font-size: 26rpx;
+  color: #D97757; /* 使用主题色强调 */
+  font-weight: 500;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

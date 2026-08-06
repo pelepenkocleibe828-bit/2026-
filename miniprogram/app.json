@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/learning/learning",
+    "pages/task/task",
+    "pages/survey/survey",
+    "pages/gallery/gallery",
+    "pages/mine/mine",
+    "pages/admin/admin"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#F8F7F5",
+    "navigationBarTitleText": "双语科普实践",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#76746F",
+    "selectedColor": "#D97757",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home-active.png"
+      },
+      {
+        "pagePath": "pages/learning/learning",
+        "text": "学习",
+        "iconPath": "images/learn.png",
+        "selectedIconPath": "images/learn-active.png"
+      },
+      {
+        "pagePath": "pages/task/task",
+        "text": "任务",
+        "iconPath": "images/task.png",
+        "selectedIconPath": "images/task-active.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "images/mine.png",
+        "selectedIconPath": "images/mine-active.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

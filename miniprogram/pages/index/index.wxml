@@ -1,0 +1,44 @@
+<view class="container">
+  <!-- 紧急通知置顶区 -->
+  <view class="urgent-block" wx:if="{{urgentNotice}}">
+    <view class="urgent-header">⚠️ 紧急通知</view>
+    <text class="urgent-title">{{urgentNotice.title}}</text>
+    <text class="urgent-content">{{urgentNotice.content}}</text>
+    <text class="urgent-time">发布于 {{urgentNotice.createTimeText}}</text>
+  </view>
+
+  <!-- 团队介绍 -->
+  <view class="card">
+    <view class="card-title">🚀 团队介绍</view>
+    <text class="card-text">我们是来自扬州大学的"语智童行"志愿服务队，致力于为乡村青少年带来双语科普教育，点燃科技梦想。</text>
+  </view>
+
+  <!-- 📋 调研区入口 -->
+  <navigator url="/pages/survey/survey" class="card survey-card" hover-class="card-hover">
+    <view class="survey-card-header">
+      <view class="card-title survey-title">📋 听见乡村声音 (问卷调研)</view>
+      <view class="arrow">➔</view>
+    </view>
+    <text class="card-text">点击参与本次科普实践的体验调查，您的反馈是我们研究的重要基石。</text>
+  </navigator>
+
+  <!-- 每日课表 -->
+  <view class="card">
+    <view class="card-title">📅 今日课表</view>
+    <view wx:if="{{todaySchedule.length === 0}}" class="empty-tip">今天没有课程安排，自由探索吧~</view>
+    <view class="schedule-item" wx:for="{{todaySchedule}}" wx:key="time">
+      <text class="time">{{item.time}}</text>
+      <text class="course">{{item.course}}</text>
+      <!-- 这里应用了最新的助教合并字段 -->
+      <text class="teacher" wx:if="{{item.displayTeacher}}"> | {{item.displayTeacher}}</text>
+    </view>
+  </view>
+
+  <!-- 活动倒计时 -->
+  <view class="card">
+    <view class="card-title">⏳ 距离科普成果展</view>
+    <view class="countdown">
+      <text class="countdown-text">{{countdownText}}</text>
+    </view>
+  </view>
+</view>

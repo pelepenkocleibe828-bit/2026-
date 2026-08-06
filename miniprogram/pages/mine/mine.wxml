@@ -1,0 +1,46 @@
+<view class="container">
+  <!-- 个人名片区 -->
+  <view class="user-card">
+    <view class="avatar-placeholder">
+      <text>🧑‍🚀</text>
+    </view>
+    <view class="user-info">
+      <text class="nickname">AI探索者</text>
+      <text class="join-date">陪伴“语智童行”的第 {{joinDays}} 天</text>
+    </view>
+  </view>
+
+  <!-- 数据看板 -->
+  <view class="stats-card">
+    <view class="stat-item">
+      <text class="stat-num">{{checkinCount}}</text>
+      <text class="stat-label">累计打卡(天)</text>
+    </view>
+    <view class="divider"></view>
+    <view class="stat-item">
+      <text class="stat-num">{{badgeCount}}</text>
+      <text class="stat-label">获得徽章(枚)</text>
+    </view>
+  </view>
+
+  <!-- 徽章荣誉墙 -->
+  <view class="badge-card">
+    <view class="card-title">🎖️ 荣誉墙</view>
+    <view class="badge-grid">
+      <!-- 循环渲染徽章：owned 为 true 时高亮，否则置灰 -->
+      <view class="badge-item {{item.owned ? 'owned' : 'locked'}}" wx:for="{{allBadges}}" wx:key="_id">
+        <view class="badge-icon-wrap">
+          <text class="badge-emoji">{{item.emoji}}</text>
+        </view>
+        <text class="badge-name">{{item.name}}</text>
+      </view>
+      
+      <view wx:if="{{allBadges.length === 0}}" class="empty-tip">徽章库还在准备中哦~</view>
+    </view>
+  </view>
+
+  <!-- 隐藏彩蛋：管理员控制台入口 (仅管理员可见) -->
+  <view class="admin-entry" wx:if="{{isAdmin}}" bindtap="goToAdmin">
+    <text>🛠️ 管理员控制台入口</text>
+  </view>
+</view>
