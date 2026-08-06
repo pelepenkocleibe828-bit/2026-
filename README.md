@@ -58,36 +58,28 @@
 
 ---
 
-🚀 快速上手与部署
-环境准备
+## 🚀 快速上手与部署
 
-下载并安装微信开发者工具。
+1. **环境准备**
+   * 下载并安装 [微信开发者工具](https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html)。
+   * 开通微信云开发（Cloudbase）服务[cite: 1]。
 
-开通微信云开发（Cloudbase）服务[引用: 1] 。
+2. **配置云环境**
+   * 打开 `app.js`，将 `wx.cloud.init` 中的 `env` 替换为你的云开发环境 ID[cite: 1]：
+     ```javascript
+     wx.cloud.init({
+       env: 'cloud1-d2g29vmhce6c05fd1', // 替换为你的环境ID[cite: 1]
+       traceUser: true
+     });
+     ```
 
-配置云环境
+3. **部署云函数**
+   * 在微信开发者工具中，右键点击 `cloudfunctions/` 下的各个云函数文件夹，选择 **“上传并部署：所有文件”**[cite: 2]。
 
-打开app.js，将wx.cloud.init中的env替换为您的云开发环境 ID [cite: 1] ：
-
-JavaScript
-wx.cloud.init({
-  env: 'cloud1-d2g29vmhce6c05fd1', // 替换为你的环境ID[cite: 1]
-  traceUser: true
-});
-使用云函数
-
-在微信开发者工具中，右键点击cloudfunctions/下各个云函数文件夹，选择“上传并配置：所有文件”。
-
-初始化云数据库集合
-
-在云开发控制台中创建以下数据库集合：
-
-tasks：每日实践任务[cite: 1]
-
-flashcards：每日学习配合与口令[cite: 1]
-
-notices：紧急通知[引用: 1]
-
-checkins：打卡记录[cite: 1]
-
-user_badges：用户获得的勋章[引用：1]
+4. **初始化云数据库集合**
+   * 在云开发控制台中创建以下数据库集合：
+     * `tasks`：每日实践任务[cite: 1]
+     * `flashcards`：每日学习卡片与口令[cite: 1]
+     * `notices`：紧急通知[cite: 1]
+     * `checkins`：打卡记录[cite: 1]
+     * `user_badges`：用户获得的勋章[cite: 1]
